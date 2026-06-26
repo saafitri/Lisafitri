@@ -1,90 +1,137 @@
 {
   "users": [
     {
-      "id": "usr-1",
-      "email": "penduduk@mail.com",
-      "username": "penduduk",
-      "nama": "Helma Yuliana",
-      "role": "user",
-      "nik": "1234567890123456",
-      "createdAt": "2026-06-26T12:56:39.886Z"
-    },
-    {
-      "id": "usr-2",
-      "email": "op.kesehatan@mail.com",
-      "username": "opkesehatan",
-      "nama": "Dr. Aulya Rea Sagita",
-      "role": "operator_kesehatan",
-      "createdAt": "2026-06-26T12:56:39.887Z"
-    },
-    {
-      "id": "usr-3",
-      "email": "op.sosial@mail.com",
-      "username": "opsosial",
-      "nama": "Esranata Amelia",
-      "role": "operator_sosial",
-      "createdAt": "2026-06-26T12:56:39.887Z"
-    },
-    {
-      "id": "usr-4",
-      "email": "admin@mail.com",
+      "id": "usr-admin",
+      "email": "admin@test.com",
       "username": "admin",
       "nama": "Nurul Kaifa",
       "role": "admin",
-      "createdAt": "2026-06-26T12:56:39.887Z"
+      "createdAt": "2026-06-26T00:00:00.000Z"
     },
     {
-      "id": "usr-5",
-      "email": "supervisor@mail.com",
+      "id": "usr-alya",
+      "email": "alya@gmail.com",
+      "username": "alya",
+      "nama": "Alya Reina Sagita",
+      "role": "admin",
+      "createdAt": "2026-06-26T00:00:00.000Z"
+    },
+    {
+      "id": "usr-opkes",
+      "email": "op.kesehatan@test.com",
+      "username": "op_kesehatan",
+      "nama": "Dr. Aulya Rea Sagita",
+      "role": "operator_kesehatan",
+      "createdAt": "2026-06-26T00:00:00.000Z"
+    },
+    {
+      "id": "usr-opsos",
+      "email": "op.sosial@test.com",
+      "username": "op_sosial",
+      "nama": "Esranata Amelia",
+      "role": "operator_sosial",
+      "createdAt": "2026-06-26T00:00:00.000Z"
+    },
+    {
+      "id": "usr-super",
+      "email": "supervisor@test.com",
       "username": "supervisor",
       "nama": "Prof. Lisa Rahma Fitri",
       "role": "supervisor",
-      "createdAt": "2026-06-26T12:56:39.887Z"
+      "createdAt": "2026-06-26T00:00:00.000Z"
+    },
+    {
+      "id": "usr-budi",
+      "email": "penduduk@test.com",
+      "username": "budi_santoso",
+      "nama": "Budi Santoso",
+      "role": "user",
+      "nik": "1234567890123456",
+      "createdAt": "2026-06-26T00:00:00.000Z"
+    },
+    {
+      "id": "usr-esra",
+      "email": "esra@gmail.com",
+      "username": "esranatabatubara",
+      "nama": "esranatabatubara",
+      "role": "user",
+      "nik": "3201020304050003",
+      "createdAt": "2026-06-26T00:00:00.000Z"
+    },
+    {
+      "id": "usr-qisty",
+      "email": "qisty@gmail.com",
+      "username": "Qisty_1",
+      "nama": "Qistysofiah",
+      "role": "user",
+      "nik": "1234567890878789",
+      "createdAt": "2026-06-26T14:54:26.000Z"
+    },
+    {
+      "id": "usr-zila",
+      "email": "zila@gmail.com",
+      "username": "zila_2",
+      "nama": "Zila",
+      "role": "user",
+      "nik": "1234567890987111",
+      "createdAt": "2026-06-26T14:50:00.000Z"
+    },
+    {
+      "id": "usr-manzilah",
+      "email": "manzilah@gmail.com",
+      "username": "manzilah.rahma",
+      "nama": "manzilah rahma",
+      "role": "user",
+      "nik": "1234567890987898",
+      "createdAt": "2026-06-26T15:00:00.000Z"
     }
   ],
   "passwords": {
-    "usr-1": "$2b$10$VPOqGs5k98QXinVH4CyINeG7kfjRIpnZ0Ww2YKrQ5XgBJuWUP/zqq",
-    "usr-2": "$2b$10$VPOqGs5k98QXinVH4CyINeG7kfjRIpnZ0Ww2YKrQ5XgBJuWUP/zqq",
-    "usr-3": "$2b$10$VPOqGs5k98QXinVH4CyINeG7kfjRIpnZ0Ww2YKrQ5XgBJuWUP/zqq",
-    "usr-4": "$2b$10$VPOqGs5k98QXinVH4CyINeG7kfjRIpnZ0Ww2YKrQ5XgBJuWUP/zqq",
-    "usr-5": "$2b$10$VPOqGs5k98QXinVH4CyINeG7kfjRIpnZ0Ww2YKrQ5XgBJuWUP/zqq"
+    "usr-admin": "$2b$10$VPOqGs5k98QXinVH4CyINeG7kfjRIpnZ0Ww2YKrQ5XgBJuWUP/zqq",
+    "usr-alya": "$2b$10$VPOqGs5k98QXinVH4CyINeG7kfjRIpnZ0Ww2YKrQ5XgBJuWUP/zqq",
+    "usr-opkes": "$2b$10$VPOqGs5k98QXinVH4CyINeG7kfjRIpnZ0Ww2YKrQ5XgBJuWUP/zqq",
+    "usr-opsos": "$2b$10$VPOqGs5k98QXinVH4CyINeG7kfjRIpnZ0Ww2YKrQ5XgBJuWUP/zqq",
+    "usr-super": "$2b$10$VPOqGs5k98QXinVH4CyINeG7kfjRIpnZ0Ww2YKrQ5XgBJuWUP/zqq",
+    "usr-budi": "$2b$10$VPOqGs5k98QXinVH4CyINeG7kfjRIpnZ0Ww2YKrQ5XgBJuWUP/zqq",
+    "usr-esra": "$2b$10$VPOqGs5k98QXinVH4CyINeG7kfjRIpnZ0Ww2YKrQ5XgBJuWUP/zqq",
+    "usr-qisty": "$2b$10$VPOqGs5k98QXinVH4CyINeG7kfjRIpnZ0Ww2YKrQ5XgBJuWUP/zqq",
+    "usr-zila": "$2b$10$VPOqGs5k98QXinVH4CyINeG7kfjRIpnZ0Ww2YKrQ5XgBJuWUP/zqq",
+    "usr-manzilah": "$2b$10$VPOqGs5k98QXinVH4CyINeG7kfjRIpnZ0Ww2YKrQ5XgBJuWUP/zqq"
   },
   "health_data": [
     {
       "id": "h-1",
-      "nik": "1234567890123456",
-      "namaPenduduk": "Helma Yuliana",
-      "tanggalLayanan": "2026-06-20",
+      "nik": "1234567890987898",
+      "namaPenduduk": "manzilah rahma",
+      "tanggalLayanan": "2026-06-27",
       "jenisLayanan": "Rawat Jalan",
-      "diagnosa": "Flu Ringan dan Demam",
+      "diagnosa": "sakit kepala",
       "statusBpjs": "Aktif",
-      "catatanMedis": "Pasien disarankan istirahat 3 hari dan minum parasetamol.",
+      "catatanMedis": "kepala sering terasa pusing",
       "status": "pending",
-      "tanggalMasuk": "2026-06-20T10:30:00Z"
+      "tanggalMasuk": "2026-06-26T15:13:00Z"
     },
     {
       "id": "h-2",
-      "nik": "3171011234560002",
-      "namaPenduduk": "Joko Susilo",
-      "tanggalLayanan": "2026-06-18",
-      "jenisLayanan": "Rawat Inap",
-      "diagnosa": "Demam Berdarah (DHF)",
+      "nik": "3201020304050001",
+      "namaPenduduk": "Ani Wijaya",
+      "tanggalLayanan": "2026-06-19",
+      "jenisLayanan": "Rawat Jalan",
+      "diagnosa": "Demam & Flu",
       "statusBpjs": "Aktif",
-      "catatanMedis": "Trombosit rendah, perlu rawat inap intensif di bangsal melati.",
-      "status": "terverifikasi",
-      "tanggalMasuk": "2026-06-18T14:15:00Z",
-      "verifikator": "Dr. Aulya Rea Sagita",
-      "tanggalVerifikasi": "2026-06-19T09:00:00Z"
+      "catatanMedis": "Demam sejak kemarin sore",
+      "status": "pending",
+      "tanggalMasuk": "2026-06-19T21:51:00Z"
     },
     {
       "id": "h-3",
-      "nik": "3273011234560003",
-      "namaPenduduk": "Dewi Lestari",
+      "nik": "1234567890123456",
+      "namaPenduduk": "Budi Santoso",
       "tanggalLayanan": "2026-06-15",
       "jenisLayanan": "Rawat Jalan",
       "diagnosa": "Hipertensi",
       "statusBpjs": "Aktif",
-      "catatanMedis": "Kontrol bulanan tekanan darah, diberikan amlodipine 5mg.",
+      "catatanMedis": "Kontrol bulanan tekanan darah, amlodipine 5mg.",
       "status": "aktif",
       "tanggalMasuk": "2026-06-15T08:00:00Z",
       "verifikator": "Dr. Aulya Rea Sagita",
@@ -95,31 +142,29 @@
   "bansos_data": [
     {
       "id": "b-1",
-      "nik": "1234567890123456",
-      "namaPenduduk": "Helma Yuliana",
-      "jenisBansos": "Program Keluarga Harapan (PKH)",
-      "tanggalMulai": "2026-07-01",
-      "catatanPengajuan": "Pengajuan bansos untuk bantuan pendidikan anak sekolah dasar.",
+      "nik": "1234567890878789",
+      "namaPenduduk": "Qistysofiah",
+      "jenisBansos": "Bantuan Langsung Tunai (BLT)",
+      "tanggalMulai": "2026-07-27",
+      "catatanPengajuan": "untuk kebutuhan keluarga",
       "status": "pending",
-      "tanggalMasuk": "2026-06-21T11:45:00Z"
+      "tanggalMasuk": "2026-06-26T14:57:00Z"
     },
     {
       "id": "b-2",
-      "nik": "3171011234560002",
+      "nik": "3201020304050003",
       "namaPenduduk": "Joko Susilo",
       "jenisBansos": "Bantuan Pangan Non Tunai (BPNT)",
-      "tanggalMulai": "2026-06-01",
-      "catatanPengajuan": "Pengajuan untuk pembagian sembako bulanan di kelurahan.",
-      "status": "terverifikasi",
-      "tanggalMasuk": "2026-06-10T09:30:00Z",
-      "verifikator": "Esranata Amelia",
-      "tanggalVerifikasi": "2026-06-12T14:00:00Z"
+      "tanggalMulai": "2026-06-19",
+      "catatanPengajuan": "Membantu perekonomian keluarga",
+      "status": "pending",
+      "tanggalMasuk": "2026-06-19T21:51:00Z"
     },
     {
       "id": "b-3",
-      "nik": "3273011234560003",
-      "namaPenduduk": "Dewi Lestari",
-      "jenisBansos": "Bantuan Langsung Tunai (BLT) Desa",
+      "nik": "1234567890123456",
+      "namaPenduduk": "Budi Santoso",
+      "jenisBansos": "Bantuan Langsung Tunai (BLT)",
       "tanggalMulai": "2026-05-01",
       "catatanPengajuan": "Keluarga kurang mampu pasca terdampak PHK massal.",
       "status": "aktif",
@@ -132,14 +177,113 @@
   "audit_logs": [
     {
       "id": "log-1",
-      "waktu": "2026-06-25T12:56:39.887Z",
-      "idPengguna": "system",
-      "namaPengguna": "System Bootstrap",
+      "waktu": "2026-06-26T15:04:23.000Z",
+      "idPengguna": "usr-admin",
+      "namaPengguna": "Nurul Kaifa",
       "rolePengguna": "admin",
-      "aksi": "BACKUP",
-      "tabelTerkait": "system",
-      "detailPerubahan": "{\"message\":\"Automatic database bootstrap and validation completed.\"}",
-      "ipAddress": "127.0.0.1"
+      "aksi": "LOGIN",
+      "tabelTerkait": "users",
+      "detailPerubahan": "{\"action\":\"login\"}",
+      "ipAddress": "115.178.21.43"
+    },
+    {
+      "id": "log-2",
+      "waktu": "2026-06-26T15:05:13.000Z",
+      "idPengguna": "usr-super",
+      "namaPengguna": "Prof. Lisa Rahma Fitri",
+      "rolePengguna": "supervisor",
+      "aksi": "LOGIN",
+      "tabelTerkait": "users",
+      "detailPerubahan": "{\"action\":\"login\"}",
+      "ipAddress": "115.178.21.43"
+    },
+    {
+      "id": "log-3",
+      "waktu": "2026-06-26T14:59:33.000Z",
+      "idPengguna": "usr-super",
+      "namaPengguna": "Prof. Lisa Rahma Fitri",
+      "rolePengguna": "supervisor",
+      "aksi": "LOGIN",
+      "tabelTerkait": "users",
+      "detailPerubahan": "{\"action\":\"login\"}",
+      "ipAddress": "115.178.21.43"
+    },
+    {
+      "id": "log-4",
+      "waktu": "2026-06-26T14:59:27.000Z",
+      "idPengguna": "usr-opsos",
+      "namaPengguna": "Esranata Amelia",
+      "rolePengguna": "operator_sosial",
+      "aksi": "LOGOUT",
+      "tabelTerkait": "users",
+      "detailPerubahan": "{\"action\":\"logout\"}",
+      "ipAddress": "115.178.21.43"
+    },
+    {
+      "id": "log-5",
+      "waktu": "2026-06-26T14:59:21.000Z",
+      "idPengguna": "usr-opsos",
+      "namaPengguna": "Esranata Amelia",
+      "rolePengguna": "operator_sosial",
+      "aksi": "UPDATE",
+      "tabelTerkait": "bansos_data",
+      "detailPerubahan": "{\"status\":\"terverifikasi\",\"verifikator\":\"Esranata Amelia\"}",
+      "ipAddress": "115.178.21.43"
+    },
+    {
+      "id": "log-6",
+      "waktu": "2026-06-26T14:58:30.000Z",
+      "idPengguna": "usr-opsos",
+      "namaPengguna": "Esranata Amelia",
+      "rolePengguna": "operator_sosial",
+      "aksi": "LOGIN",
+      "tabelTerkait": "users",
+      "detailPerubahan": "{\"action\":\"login\"}",
+      "ipAddress": "115.178.21.43"
+    },
+    {
+      "id": "log-7",
+      "waktu": "2026-06-26T14:57:49.000Z",
+      "idPengguna": "usr-qisty",
+      "namaPengguna": "Qistysofiah",
+      "rolePengguna": "user",
+      "aksi": "LOGOUT",
+      "tabelTerkait": "users",
+      "detailPerubahan": "{\"action\":\"logout\"}",
+      "ipAddress": "115.178.21.43"
+    },
+    {
+      "id": "log-8",
+      "waktu": "2026-06-26T14:57:43.000Z",
+      "idPengguna": "usr-qisty",
+      "namaPengguna": "Qistysofiah",
+      "rolePengguna": "user",
+      "aksi": "CREATE",
+      "tabelTerkait": "bansos_data",
+      "detailPerubahan": "{\"jenisBansos\":\"Bantuan Langsung Tunai (BLT)\",\"catatanPengajuan\":\"untuk kebutuhan keluarga\"}",
+      "ipAddress": "115.178.21.43"
+    },
+    {
+      "id": "log-9",
+      "waktu": "2026-06-26T14:55:12.000Z",
+      "idPengguna": "usr-qisty",
+      "namaPengguna": "Qistysofiah",
+      "rolePengguna": "user",
+      "aksi": "LOGIN",
+      "tabelTerkait": "users",
+      "detailPerubahan": "{\"action\":\"login\"}",
+      "ipAddress": "115.178.21.43"
+    },
+    {
+      "id": "log-10",
+      "waktu": "2026-06-26T14:54:26.000Z",
+      "idPengguna": "usr-qisty",
+      "namaPengguna": "Qistysofiah",
+      "rolePengguna": "user",
+      "aksi": "CREATE",
+      "tabelTerkait": "users",
+      "detailPerubahan": "{\"action\":\"self-register\"}",
+      "ipAddress": "115.178.21.43"
     }
   ],
   "backups": []
