@@ -377,7 +377,7 @@ app.post("/api/auth/login", (req: Request, res: Response): void => {
   }
 
   // Visual Lockout mechanism
-  const loginKey = identity.toLowerCase();
+  const loginKey = identity.trim().toLowerCase();
   const attempt = loginAttempts[loginKey];
   
   if (attempt && attempt.lockedUntil && attempt.lockedUntil > new Date()) {
@@ -391,7 +391,7 @@ app.post("/api/auth/login", (req: Request, res: Response): void => {
   }
 
   const user = db.users.find(
-    u => u.email.toLowerCase() === loginKey || u.username.toLowerCase() === loginKey
+    u => u.email.trim().toLowerCase() === loginKey || u.username.trim().toLowerCase() === loginKey
   );
 
   if (!user) {
@@ -1064,4 +1064,8 @@ async function startServer() {
   });
 }
 
-startServer();
+if (!process.env.VERCEL) {
+  startServer();
+}
+
+export default app;

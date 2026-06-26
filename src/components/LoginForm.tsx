@@ -209,7 +209,7 @@ export default function LoginForm({ onLoginSuccess, triggerToast }: LoginFormPro
     }
   };
 
-  const handleAutofill = (userRole: string, userIdent: string) => {
+  const handleAutofill = async (userRole: string, userIdent: string) => {
     // Clear lockout completely for premium demo convenience!
     setIsLocked(false);
     setLockSeconds(0);
@@ -220,15 +220,46 @@ export default function LoginForm({ onLoginSuccess, triggerToast }: LoginFormPro
     
     setIdentity(userIdent);
     setPassword('password123');
-    triggerToast(`Akun ${userRole} diisi otomatis!`, 'success');
+    setLoading(true);
+    triggerToast(`Mencoba masuk otomatis sebagai ${userRole}...`, 'success');
+
+    try {
+      const res = await fetch('/api/auth/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ identity: userIdent, password: 'password123' }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        setErrorMsg(data.message || 'Login otomatis gagal.');
+        triggerToast(data.message || 'Gagal login otomatis.', 'error');
+        setLoading(false);
+        return;
+      }
+
+      // Success
+      localStorage.setItem('login_attempts', '0');
+      triggerToast(`Berhasil login sebagai ${data.user.nama}!`, 'success');
+      onLoginSuccess(data.token, data.user);
+    } catch (err) {
+      console.error(err);
+      setErrorMsg('Gagal terhubung ke server.');
+      triggerToast('Gagal menghubungi server.', 'error');
+    } finally {
+      setLoading(false);
+    }
   };
 
   const demoUsers = [
-    { role: 'Admin (Nurul Kaifa)', ident: 'admin@test.com', desc: 'Kelola penduduk & audit log keamanan.' },
-    { role: 'Penduduk (Qistysofiah)', ident: 'Qisty_1', desc: 'Lihat data diri & tracking bansos.' },
-    { role: 'Op. Kesehatan (Dr. Aulya)', ident: 'op.kesehatan@test.com', desc: 'Input & verifikasi layanan kesehatan.' },
-    { role: 'Op. Sosial (Esranata)', ident: 'op.sosial@test.com', desc: 'Verifikasi & kelola pengajuan bansos.' },
-    { role: 'Supervisor (Prof. Lisa)', ident: 'supervisor@test.com', desc: 'Persetujuan akhir, backup database, grafik.' },
+    { role: 'admin', username: 'admin' },
+    { role: 'user', username: 'Qisty_1' },
+    { role: 'operator_kesehatan', username: 'op_kesehatan' },
+    { role: 'operator_sosial', username: 'op_sosial' },
+    { role: 'supervisor', username: 'supervisor' },
   ];
 
   return (
@@ -558,60 +589,32 @@ export default function LoginForm({ onLoginSuccess, triggerToast }: LoginFormPro
         className="w-full max-w-md bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden flex flex-col justify-between"
       >
         <div>
-          <div className="bg-slate-800 p-6 text-white relative">
+          <div className="bg-[#008080] p-6 text-white relative">
             <div className="absolute top-0 right-0 w-24 h-24 bg-white/5 rounded-full -mr-8 -mt-8 blur-lg"></div>
             <div className="flex items-center gap-2">
-              <HelpCircle className="w-5 h-5 text-teal-400" />
-              <h3 className="font-bold text-sm uppercase tracking-wider">Akses Khusus Dosen Penguji</h3>
-            </div>
-            <div className="mt-2 p-2.5 bg-teal-950/40 border border-teal-800/40 rounded-xl">
-              <p className="text-[11px] font-semibold text-teal-300">
-                Yth. Ibu Dr. Amalia Rahmah, ST., MT.
-              </p>
-              <p className="text-slate-300 text-[10px] mt-1 leading-relaxed">
-                Silakan pilih salah satu peran di bawah ini untuk mensimulasikan sistem multi-pengguna secara instan sesuai dengan isi laporan sdr. Lisa Rahma Fitri.
-              </p>
+              <Key className="w-5 h-5 text-teal-300" />
+              <h3 className="font-bold text-sm uppercase tracking-wider">Pilih Akun Demo</h3>
             </div>
           </div>
 
-          <div className="p-6 space-y-4">
-            <div>
-              <h4 className="text-xs font-bold text-slate-500 uppercase tracking-widest mb-2.5">
-                Pilih Akun Demo (Autofill Instan)
-              </h4>
-              <div className="space-y-2">
-                {demoUsers.map((user) => (
-                  <button
-                    key={user.ident}
-                    type="button"
-                    onClick={() => handleAutofill(user.role, user.ident)}
-                    className="w-full text-left p-3 rounded-xl border border-gray-100 hover:border-[#008080]/60 hover:bg-teal-50/30 transition-all group flex items-start justify-between cursor-pointer"
-                  >
-                    <div className="space-y-0.5">
-                      <div className="flex items-center gap-1.5">
-                        <span className="font-bold text-xs text-gray-800 group-hover:text-[#008080]">{user.role}</span>
-                        <span className="text-[9px] font-mono bg-slate-100 text-slate-600 px-1.5 py-0.2 rounded font-medium">@{user.ident}</span>
-                      </div>
-                      <p className="text-[10px] text-gray-400 leading-normal">{user.desc}</p>
-                    </div>
-                    <Key className="w-3.5 h-3.5 text-gray-300 group-hover:text-[#008080] shrink-0 mt-0.5 transition-colors" />
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            <div className="pt-3 border-t border-gray-100 space-y-2">
-              <h4 className="text-xs font-bold text-slate-500 uppercase tracking-widest">
-                Catatan Penting Presentasi
-              </h4>
-              <ul className="text-[10.5px] text-gray-500 space-y-1.5 list-disc pl-4 leading-relaxed">
-                <li>
-                  <strong className="text-gray-700">Registrasi Akun Mandiri</strong>: Warga dapat mendaftar mandiri via tab <span className="font-semibold text-[#008080]">Daftar NIK</span> untuk mensimulasikan integrasi database Dinas dan Dukcapil secara real-time.
-                </li>
-                <li>
-                  <strong className="text-gray-700">Alur Verifikasi</strong>: Tunjukkan bagaimana data pendaftaran mandiri warga masuk ke antrean operator dinas terlebih dahulu untuk divalidasi sebelum disetujui final oleh supervisor.
-                </li>
-              </ul>
+          <div className="p-6">
+            <div className="space-y-2">
+              {demoUsers.map((user) => (
+                <button
+                  key={user.username}
+                  type="button"
+                  onClick={() => handleAutofill(user.role, user.username)}
+                  className="w-full text-left p-3.5 rounded-xl border border-gray-100 hover:border-[#008080]/60 hover:bg-teal-50/30 transition-all group flex items-center justify-between cursor-pointer"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 rounded-full bg-[#008080]/40 group-hover:bg-[#008080] transition-colors" />
+                    <span className="font-mono text-xs text-gray-700 group-hover:text-[#008080] font-semibold transition-colors">
+                      {user.username}
+                    </span>
+                  </div>
+                  <Key className="w-4 h-4 text-gray-300 group-hover:text-[#008080] transition-colors" />
+                </button>
+              ))}
             </div>
           </div>
         </div>
