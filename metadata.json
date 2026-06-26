@@ -1,0 +1,6 @@
+{
+  "name": "SIDELKAS",
+  "description": "Sistem Integrasi Data Layanan Kesehatan dan Jaminan Sosial berbasis NIK dengan autentikasi JWT dan pembagian hak akses RBAC (User, Operator, Admin, Supervisor).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

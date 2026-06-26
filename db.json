@@ -1,0 +1,146 @@
+{
+  "users": [
+    {
+      "id": "usr-1",
+      "email": "penduduk@mail.com",
+      "username": "penduduk",
+      "nama": "Helma Yuliana",
+      "role": "user",
+      "nik": "1234567890123456",
+      "createdAt": "2026-06-26T12:56:39.886Z"
+    },
+    {
+      "id": "usr-2",
+      "email": "op.kesehatan@mail.com",
+      "username": "opkesehatan",
+      "nama": "Dr. Aulya Rea Sagita",
+      "role": "operator_kesehatan",
+      "createdAt": "2026-06-26T12:56:39.887Z"
+    },
+    {
+      "id": "usr-3",
+      "email": "op.sosial@mail.com",
+      "username": "opsosial",
+      "nama": "Esranata Amelia",
+      "role": "operator_sosial",
+      "createdAt": "2026-06-26T12:56:39.887Z"
+    },
+    {
+      "id": "usr-4",
+      "email": "admin@mail.com",
+      "username": "admin",
+      "nama": "Nurul Kaifa",
+      "role": "admin",
+      "createdAt": "2026-06-26T12:56:39.887Z"
+    },
+    {
+      "id": "usr-5",
+      "email": "supervisor@mail.com",
+      "username": "supervisor",
+      "nama": "Prof. Lisa Rahma Fitri",
+      "role": "supervisor",
+      "createdAt": "2026-06-26T12:56:39.887Z"
+    }
+  ],
+  "passwords": {
+    "usr-1": "$2b$10$VPOqGs5k98QXinVH4CyINeG7kfjRIpnZ0Ww2YKrQ5XgBJuWUP/zqq",
+    "usr-2": "$2b$10$VPOqGs5k98QXinVH4CyINeG7kfjRIpnZ0Ww2YKrQ5XgBJuWUP/zqq",
+    "usr-3": "$2b$10$VPOqGs5k98QXinVH4CyINeG7kfjRIpnZ0Ww2YKrQ5XgBJuWUP/zqq",
+    "usr-4": "$2b$10$VPOqGs5k98QXinVH4CyINeG7kfjRIpnZ0Ww2YKrQ5XgBJuWUP/zqq",
+    "usr-5": "$2b$10$VPOqGs5k98QXinVH4CyINeG7kfjRIpnZ0Ww2YKrQ5XgBJuWUP/zqq"
+  },
+  "health_data": [
+    {
+      "id": "h-1",
+      "nik": "1234567890123456",
+      "namaPenduduk": "Helma Yuliana",
+      "tanggalLayanan": "2026-06-20",
+      "jenisLayanan": "Rawat Jalan",
+      "diagnosa": "Flu Ringan dan Demam",
+      "statusBpjs": "Aktif",
+      "catatanMedis": "Pasien disarankan istirahat 3 hari dan minum parasetamol.",
+      "status": "pending",
+      "tanggalMasuk": "2026-06-20T10:30:00Z"
+    },
+    {
+      "id": "h-2",
+      "nik": "3171011234560002",
+      "namaPenduduk": "Joko Susilo",
+      "tanggalLayanan": "2026-06-18",
+      "jenisLayanan": "Rawat Inap",
+      "diagnosa": "Demam Berdarah (DHF)",
+      "statusBpjs": "Aktif",
+      "catatanMedis": "Trombosit rendah, perlu rawat inap intensif di bangsal melati.",
+      "status": "terverifikasi",
+      "tanggalMasuk": "2026-06-18T14:15:00Z",
+      "verifikator": "Dr. Aulya Rea Sagita",
+      "tanggalVerifikasi": "2026-06-19T09:00:00Z"
+    },
+    {
+      "id": "h-3",
+      "nik": "3273011234560003",
+      "namaPenduduk": "Dewi Lestari",
+      "tanggalLayanan": "2026-06-15",
+      "jenisLayanan": "Rawat Jalan",
+      "diagnosa": "Hipertensi",
+      "statusBpjs": "Aktif",
+      "catatanMedis": "Kontrol bulanan tekanan darah, diberikan amlodipine 5mg.",
+      "status": "aktif",
+      "tanggalMasuk": "2026-06-15T08:00:00Z",
+      "verifikator": "Dr. Aulya Rea Sagita",
+      "tanggalVerifikasi": "2026-06-16T11:00:00Z",
+      "tanggalAccept": "2026-06-17T15:00:00Z"
+    }
+  ],
+  "bansos_data": [
+    {
+      "id": "b-1",
+      "nik": "1234567890123456",
+      "namaPenduduk": "Helma Yuliana",
+      "jenisBansos": "Program Keluarga Harapan (PKH)",
+      "tanggalMulai": "2026-07-01",
+      "catatanPengajuan": "Pengajuan bansos untuk bantuan pendidikan anak sekolah dasar.",
+      "status": "pending",
+      "tanggalMasuk": "2026-06-21T11:45:00Z"
+    },
+    {
+      "id": "b-2",
+      "nik": "3171011234560002",
+      "namaPenduduk": "Joko Susilo",
+      "jenisBansos": "Bantuan Pangan Non Tunai (BPNT)",
+      "tanggalMulai": "2026-06-01",
+      "catatanPengajuan": "Pengajuan untuk pembagian sembako bulanan di kelurahan.",
+      "status": "terverifikasi",
+      "tanggalMasuk": "2026-06-10T09:30:00Z",
+      "verifikator": "Esranata Amelia",
+      "tanggalVerifikasi": "2026-06-12T14:00:00Z"
+    },
+    {
+      "id": "b-3",
+      "nik": "3273011234560003",
+      "namaPenduduk": "Dewi Lestari",
+      "jenisBansos": "Bantuan Langsung Tunai (BLT) Desa",
+      "tanggalMulai": "2026-05-01",
+      "catatanPengajuan": "Keluarga kurang mampu pasca terdampak PHK massal.",
+      "status": "aktif",
+      "tanggalMasuk": "2026-05-02T13:00:00Z",
+      "verifikator": "Esranata Amelia",
+      "tanggalVerifikasi": "2026-05-04T10:00:00Z",
+      "tanggalAccept": "2026-05-05T09:30:00Z"
+    }
+  ],
+  "audit_logs": [
+    {
+      "id": "log-1",
+      "waktu": "2026-06-25T12:56:39.887Z",
+      "idPengguna": "system",
+      "namaPengguna": "System Bootstrap",
+      "rolePengguna": "admin",
+      "aksi": "BACKUP",
+      "tabelTerkait": "system",
+      "detailPerubahan": "{\"message\":\"Automatic database bootstrap and validation completed.\"}",
+      "ipAddress": "127.0.0.1"
+    }
+  ],
+  "backups": []
+}
